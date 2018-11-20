@@ -101,7 +101,7 @@ class MiReporte():
     def compilarReporte(self):
         subprocess.call(["pdflatex", self.nombre])
         subprocess.call(["rm", self.nombre.replace('.tex', '.log'), self.nombre.replace('.tex', '.aux')])
-        #subprocess.call(["rm", self.nombre])
+        subprocess.call(["rm", self.nombre])
     
     def getNombre(self):
         return self.nombre
